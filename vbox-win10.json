@@ -51,7 +51,7 @@
     },
     {
       "type": "powershell",
-      "script": "scripts/after-reboot.ps1",
+      "script": "scripts/after-reboot-win10.ps1",
       "elevated_user": "vagrant",
       "elevated_password": "vagrant"
     },

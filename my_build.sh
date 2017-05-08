@@ -18,7 +18,7 @@ fi
 
 VERSION="$(date +%Y.%-m).$old"
 
-ISO=/Volumes/256Gb/Downloads/iso/Windows10_InsiderPreview_Client_x64_en-gb_15063.iso
+ISO=/Volumes/256Gb/Downloads/iso/Win10_1703_EnglishInternational_x64.iso
 ISO_SUM=a73f174bcfd1d260285264b2e437a124
 OUTPUT_DIR=/Volumes/256Gb/output-
 

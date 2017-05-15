@@ -1,6 +1,7 @@
-Write-Host "Uninstall Chef..."
-if(Test-Path "c:\windows\temp\chef.msi") {
-  Start-Process MSIEXEC.exe '/uninstall c:\windows\temp\chef.msi /quiet' -Wait
+﻿Write-Host "Uninstall Chef..."
+$ChefPath = (Get-ChildItem "C:\Windows\Temp\chef*msi").FullName
+if(Test-Path $ChefPath) {
+  Start-Process MSIEXEC.exe "/uninstall $ChefPath /quiet" -Wait
 }
 
 Write-Host "Cleaning Temp Files"

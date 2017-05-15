@@ -20,7 +20,7 @@
       "winrm_timeout": "12h",
       "shutdown_command": "C:/Windows/Panther/Unattend/packer_shutdown.bat",
       "post_shutdown_delay": "1m",
-      "shutdown_timeout": "15m",
+      "shutdown_timeout": "30m",
       "floppy_files": [
         "answer_files/10/Autounattend.xml",
         "scripts/winrm.ps1"
@@ -36,7 +36,6 @@
         "wsus-client::configure",
         "packer-templates::install_ps_modules",
         "packer-templates::vbox_guest_additions",
-        "packer-templates::uninstall_powershell_ise",
         "packer-templates::delete_pagefile"
       ]
     },
@@ -77,7 +76,10 @@
     },
     {
       "type": "powershell",
-      "script": "scripts/cleanup.ps1",
+      "scripts": [
+        "scripts/clean-mgr.ps1",
+        "scripts/cleanup.ps1"
+      ],
       "elevated_user": "vagrant",
       "elevated_password": "vagrant"
     }
